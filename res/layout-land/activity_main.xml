@@ -14,32 +14,31 @@
         android:text="@string/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:id="@+id/textView"
-        android:textAlignment="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:id="@+id/textView_welcome_text"
+        android:textAlignment="center"
         android:textSize="36sp" />
 
     <Button
         android:text="@string/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_welcome_text"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:id="@+id/button"
-        tools:textSize="24sp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/button_start_button"
+        tools:textSize="24sp" />
 
     <Button
         android:text="@string/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        tools:textSize="24sp"
-        android:focusable="false"
-        android:clickable="false"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/button_start_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:id="@+id/button_continue_button"
+        tools:textSize="24sp" />
+
 </RelativeLayout>
