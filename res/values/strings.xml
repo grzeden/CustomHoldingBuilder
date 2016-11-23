@@ -3,4 +3,8 @@
     <string name="continue_button">Continue</string>
     <string name="welcome_text">Welcome text for application</string>
     <string name="start_button">Get Started</string>
+    <string name="get_location_text">First we need to get your location</string>
+    <string name="location_label_text">Your Location</string>
+    <string name="location_text">LOCATION DISABLED</string>
+    <string name="spinner_label_text">Or, Select your location below</string>
 </resources>
