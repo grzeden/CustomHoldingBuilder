@@ -1,6 +1,5 @@
 package edu.grzegorzewski.customholdingslistbuilder;
 
-
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -40,12 +39,12 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * TODO Class description.
+ * Extension of the Context class to provide access to methods of the Geocorder and Address objects.
  *
  * @author Dennis Grzegorzewski.
  * @version 1.0, 11/20/2016
  */
- class ThisState extends Context {
+class ThisState extends Context {
 
     /**
      * No-arg constructor
@@ -54,18 +53,22 @@ import java.util.Locale;
     } // end constructor
 
     /**
-     * TODO Method description.
+     * Returns the administrative area name of the address,
+     * returned from a Geocoder Location that is known to describe the area immediately surrounding
+     * the given latitude and longitude provided as the parameters.
      *
-     * @param latitude The latitude, in degrees.
+     * @param latitude  The latitude, in degrees.
      * @param longitude The longitude, in degrees.
-     * @return - The administrative area name
+     * @return - The administrative area name.
      * @throws IOException
+     * @since 1.0
      */
     String getThisState(double latitude, double longitude) throws IOException {
-        Geocoder geocoder = new Geocoder(this,Locale.getDefault());
-        // Here 1 represent max location result to return
+        // Construct a Geocoder whose responses will be localized for the given Locale.
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        // Return an array with 1 Address that is known to describe the area immediately surrounding the given latitude and longitude.
         List<Address> addressList = geocoder.getFromLocation(latitude, longitude, 1);
-        // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+        // Return the administrative area name of the address, for example, "CA", or null if it is unknown
         return addressList.get(0).getAdminArea();
     } // end method getThisState
 
@@ -532,4 +535,5 @@ import java.util.Locale;
     public boolean isDeviceProtectedStorage() {
         return false;
     }
-}
+
+} // end class ThisState

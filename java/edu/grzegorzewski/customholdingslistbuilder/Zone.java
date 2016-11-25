@@ -13,23 +13,39 @@ class Zone {
     /*
      * Declare class variables.
      */
-    private ArrayList<String> states;
+    private ArrayList<String> states; // A list of U.S. state or territory abbreviations.
 
-    /*
-     * Constructors.
-     */
+  /*
+   * Constructors.
+   */
 
     /**
      * No-arg constructor
+     *
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
+     * @since 1.0
      */
-    public Zone() {
-        this.states = (new ArrayList<String>());
+    Zone() {
+        this.states = new ArrayList<>();
     } //end constructor
 
     /**
      * Full-arg constructor
+     *
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
+     * @since 1.0
      */
-    public Zone(ArrayList<String> states) {
+    Zone(ArrayList<String> states) {
         this.states = states;
     } //end constructor
 
@@ -38,72 +54,78 @@ class Zone {
      */
 
     /**
-     * TODO Method description.
+     * Adds a state to the states ArrayList,
+     * and returns true if the list has been changed.
      *
-     * @param state
-     * @return - true if this list changed as a result of the call
-     * @see #states
-     * @see #deleteState(String)
-     * @see #setStates(ArrayList)
-     * @see #getStates()
+     * @param state The abbreviation of a U.S. state or territory, for example, "CA".
+     * @return - true if this list changed as a result of the call.
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
      * @since 1.0
      */
-    public boolean addState(String state) {
+    boolean addState(String state) {
         return this.states.add(state);
     } // end method addState
 
     /**
-     * TODO Method description.
+     * Deletes a state from the states ArrayList,
+     * and returns true if the list contained the specified element.
      *
-     * @param state
-     * @return - true if this list contained the specified element
-     * @see #states
-     * @see #addState(String)
-     * @see #setStates(ArrayList)
-     * @see #getStates()
+     * @param state The abbreviation of a U.S. state or territory, for example, "CA".
+     * @return - true if this list contained the specified element.
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
      * @since 1.0
      */
-    public boolean deleteState(String state) {
+    boolean deleteState(String state) {
         return this.states.remove(state);
     } // end method deleteState
 
     /**
-     * TODO Method description.
-     *
-     * @param states ArrayList of Strings to initialize this
-     * @see #states
-     * @see #addState(String)
-     * @see #deleteState(String)
-     * @see #getStates()
-     * @since 1.0
-     */
-    public void setStates(ArrayList<String> states) {
-        this.states = states;
-    } // end method setStates
-
-    /**
-     * TODO Method description.
+     * Returns an ArrayList of U.S. state or territory abbreviations.
      *
      * @return - ArrayList of Strings in this
-     * @see #states
-     * @see #addState(String)
-     * @see #deleteState(String)
-     * @see #setStates(ArrayList)
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
      * @since 1.0
      */
-    public ArrayList<String> getStates() {
+    ArrayList<String> getStates() {
         return states;
     } // end method getStates
 
     /**
-     * TODO Method description.
+     * Sets the states ArrayList of U.S. state or territory abbreviations.
      *
-     * @return
-     * @see #states
-     * @see #addState(String)
-     * @see #deleteState(String)
-     * @see #getStates()
-     * @see #setStates(ArrayList)
+     * @param states ArrayList of Strings to initialize this
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #toString() Returns a string representation of the Zone object.
+     * @since 1.0
+     */
+    void setStates(ArrayList<String> states) {
+        this.states = states;
+    } // end method setStates
+
+    /**
+     * Returns a string representation of the Zone object.
+     *
+     * @return - A string representation of the Zone object.
+     * @see #states A list of U.S. state or territory abbreviations.
+     * @see #addState(String) Adds a state to the states ArrayList, and returns true if the list has been changed.
+     * @see #deleteState(String) Deletes a state from the states ArrayList, and returns true if the list contained the specified element.
+     * @see #getStates() Returns the states ArrayList of U.S. state or territory abbreviations.
+     * @see #setStates(ArrayList) Sets the states ArrayList of U.S. state or territory abbreviations.
      * @since 1.0
      */
     @Override
