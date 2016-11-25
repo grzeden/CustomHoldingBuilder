@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupStartButton() {
 
         // Get button resource.
-        Button button = (Button) findViewById(R.id.button_start);
+        Button button = (Button) findViewById(R.id.button_start_new);
         // Create button listener.
         button.setOnClickListener( new View.OnClickListener() {
 

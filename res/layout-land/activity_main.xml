@@ -27,20 +27,20 @@
         android:textSize="36sp" />
 
     <Button
-        android:text="@string/start_button"
+        android:text="@string/start_new_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_welcome_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:id="@+id/button_start"
+        android:id="@+id/button_start_new"
         tools:textSize="24sp" />
 
     <Button
         android:text="@string/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_start"
+        android:layout_below="@+id/button_start_new"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:id="@+id/button_continue"
