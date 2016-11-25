@@ -11,6 +11,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,24 +23,46 @@ public class MainActivity extends AppCompatActivity {
         // Acquire a reference to the system Location Manager
         LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
-        // Define a listener that responds to location updates
+        // create a listener for location updates
         LocationListener locationListener = new LocationListener() {
+            // Called when a new location is found by the network location provider.
             public void onLocationChanged(Location location) {
+                //
                 ThisState thisState = new ThisState() {};
-                // Called when a new location is found by the network location provider.
+                //
                 try {
+                    //
                     thisState.getThisState(location.getLatitude(), location.getLongitude());
-                } catch (IOException e) {
+                } // end try
+                //
+                catch (IOException e) {
                     e.printStackTrace();
-                }
-            }
+                } // end catch
+            } // end method onLocationChanged
 
+            /**
+             * Required onStatusChanged method implementation of abstract class LocationListener
+             *
+             * @param provider
+             * @param status
+             * @param extras
+             */
             public void onStatusChanged(String provider, int status, Bundle extras) {
             }
 
+            /**
+             * Required onProviderEnabled method implementation of abstract class LocationListener
+             *
+             * @param provider
+             */
             public void onProviderEnabled(String provider) {
             }
 
+            /**
+             * Required onProviderDisabled method implementation of abstract class LocationListener
+             *
+             * @param provider
+             */
             public void onProviderDisabled(String provider) {
             }
         };
