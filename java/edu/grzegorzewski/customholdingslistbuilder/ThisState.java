@@ -1,5 +1,10 @@
 package edu.grzegorzewski.customholdingslistbuilder;
-
+/* ITMD-555 Android App Development
+ * Dennis Grzegorzewski
+ * Christopher Montufar
+ * Final Project
+ * Due: 12/05/2016
+ */
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;

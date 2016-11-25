@@ -1,9 +1,19 @@
 package edu.grzegorzewski.customholdingslistbuilder;
-
+/* ITMD-555 Android App Development
+ * Dennis Grzegorzewski
+ * Christopher Montufar
+ * Final Project
+ * Due: 12/05/2016
+ */
 import java.util.ArrayList;
 
 /**
- * TODO Class description.
+ * Contains an ArrayList of U.S. state or territory abbreviations,
+ * and the methods add a state to the list,
+ * remove a state from the list,
+ * set the entire list,
+ * return the entire list,
+ * and return a string representation of the Zone object.
  *
  * @author Dennis Grzegorzewski.
  * @version 1.0, 11/20/2016
@@ -15,9 +25,9 @@ class Zone {
      */
     private ArrayList<String> states; // A list of U.S. state or territory abbreviations.
 
-  /*
-   * Constructors.
-   */
+    /*
+     * Constructors.
+     */
 
     /**
      * No-arg constructor
