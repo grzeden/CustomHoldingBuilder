@@ -18,18 +18,17 @@ import android.support.v4.app.ActivityCompat;
 import java.io.IOException;
 
 /**
- * Class description.
+ * TODO Class description.
  *
  * @author Dennis Grzegorzewski.
  * @version 1.0, 11/23/2016
  */
 public class GetLocationActivity extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_get_location);
 
 
         // Acquire a reference to the system Location Manager

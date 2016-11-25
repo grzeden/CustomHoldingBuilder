@@ -21,7 +21,7 @@ import java.util.ArrayList;
 class Zone {
 
     /*
-     * Declare class variables.
+     * Declare instance variables.
      */
     private ArrayList<String> states; // A list of U.S. state or territory abbreviations.
 

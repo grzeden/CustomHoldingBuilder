@@ -33,17 +33,17 @@
         android:layout_below="@+id/textView_welcome_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:id="@+id/button_start_button"
+        android:id="@+id/button_start"
         tools:textSize="24sp" />
 
     <Button
         android:text="@string/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_start_button"
+        android:layout_below="@+id/button_start"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:id="@+id/button_continue_button"
+        android:id="@+id/button_continue"
         tools:textSize="24sp" />
 
 </RelativeLayout>
