@@ -5,6 +5,7 @@ package edu.grzegorzewski.customholdingslistbuilder;
  * Final Project
  * Due: 12/05/2016
  */
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +15,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -155,14 +155,20 @@ public class GetLocationActivity extends Activity implements AdapterView.OnItemS
 
     private List<String> setStateList() {
 
+        // Declare an Array of Strings and initialize with state abbreviation data.
         String[] stateNames = {"AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
                                "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME",
                                "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM",
                                "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD", "TN",
                                "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"};
+
+        // Create an ArrayList of Strings stateList.
         List<String> stateList = new ArrayList<>();
 
-        boolean addAll = Collections.addAll(stateList, stateNames);
+        // Add the contents of the Array of Strings statenames to the ArrayList of Strings stateList
+        Collections.addAll(stateList, stateNames);
+
+        // A List of Strings containing state abbreviations.
         return stateList;
 
     } // end method setStateList
